@@ -1,0 +1,151 @@
+ import 'package:flutter/material.dart';
+
+class Mon extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      scrollDirection: Axis.horizontal,
+      children: [
+        CustomVoiture(
+          text:"Aston\nPrix : 50000\$",
+          color1: 0xFF2196F3,
+          color2: 0xFF21DDCD,
+        ),
+         CustomVoiture(
+          text:"Audi\nPrix : 5000\$",
+          color1: 0xFFF316A9,
+          color2: 0xFFC0C75C,
+        ),
+        CustomVoiture(
+          text:"Bentley\nPrix : 150000\$",
+          color1: 0xFF2C19D8,
+          color2: 0xFF339765,
+        ),
+        CustomVoiture(
+          text:"BMW\nPrix : 30000\$",
+          color1: 0xFFCF21B8,
+          color2: 0xFF7410AD,
+        ),
+         CustomVoiture(
+          text:"Chevrolet\nPrix : 250000\$",
+          color1: 0xFF62CF41,
+          color2: 0xFF8E2FCE,
+        ),
+         CustomVoiture(
+          text:"Chevrolet\nPrix : 90000\$",
+          color1: 0xFFD0CFDB,
+          color2: 0xFFF3CF2D,
+        ),
+         CustomVoiture(
+          text:"Discovery\nPrix : 50000\$",
+          color1: 0xFFD81919,
+          color2: 0xFF7A27DA,
+        ),
+         CustomVoiture(
+          text:"Ford\nPrix : 50000\$",
+          color1: 0xFF348620,
+          color2: 0xFF333597,
+        ),
+         CustomVoiture(
+          text:"Lamborghini\nPrix : 950000\$",
+          color1: 0xFFFA0909,
+          color2: 0xFFD39420,
+        ),
+         CustomVoiture(
+          text:"LV front\nPrix : 50000\$",
+          color1: 0xFF5DB9A2,
+          color2: 0xFF162D6D,
+        ),
+         CustomVoiture(
+          text:"Maserati\nPrix : 50000\$",
+          color1: 0xFF1FD819,
+          color2: 0xFF3A3397,
+        ),
+         CustomVoiture(
+          text:"Renault\nPrix : 50000\$",
+          color1: 0xFFD819CE,
+          color2: 0xFFF3BE12,
+        ),
+         CustomVoiture(
+          text:"Rolls\nPrix : 50000\$",
+          color1: 0xFF28E467,
+          color2: 0xFFE219B6,
+        ),
+         CustomVoiture(
+          text:"Range Rover\nPrix : 50000\$",
+          color1: 0xFF1D2CB4,
+          color2: 0xFF1DFA30,
+        ),
+         CustomVoiture(
+          text:"Toyota\nPrix : 9990\$",
+          color1: 0xFFD8A519,
+          color2: 0xFF4A16C4,
+        ),
+      ],
+    );
+  }
+}
+// class As extends StatelessWidget {
+//   final String initialtext;
+//   const As({
+//     this.initialtext,
+//     Key key,
+//   }):super(key: key);
+//   @override
+//   Widget build(BuildContext context) {
+    // return Container(
+    //   width:50,
+    //   height: double.infinity,
+    //   decoration: 
+    //   BoxDecoration(
+    //     gradient:LinearGradient(colors: [
+    //       Colors.blue,
+    //       Colors.blueGrey
+    //     ]),
+    //     borderRadius:BorderRadius.all(Radius.circular(20))
+    //      ),
+    //      child: 
+    //      Text(initialtext,style: TextStyle(
+    //        fontWeight: FontWeight.bold,
+    //        fontStyle: FontStyle.italic,
+    //        fontSize: 15
+    //      ),
+    //      ),
+    // );
+//   }
+// }
+class CustomVoiture extends StatelessWidget {
+  final String text;
+  final int color1,color2;
+  const CustomVoiture({
+      Key key,
+      this.text,
+      this.color1,
+      this.color2
+  }):super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.all(5),
+      width:100,
+      height:100,
+      decoration: 
+      BoxDecoration(
+        gradient:LinearGradient(colors: [
+          Color(color1),
+          Color(color2)
+        ]),
+        borderRadius:BorderRadius.all(Radius.circular(20))
+         ),
+         child: 
+         Center(
+           child: Text(text,style: TextStyle(
+             fontWeight: FontWeight.bold,
+             fontStyle: FontStyle.italic,
+             fontSize: 15
+           ),
+           ),
+         ),
+    );
+  }
+}
